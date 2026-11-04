@@ -46,7 +46,7 @@ public class SecurityConfig {
 
     @Bean
     UserDetailsService userDetailsService(PasswordEncoder encoder) {
-        var aluno = User.withUsername("aluno")
+        var aluno = User.withUsername("aluno") //hardcoded/chumbado
                 .password(encoder.encode("Senha123!"))
                 .build();
         return new InMemoryUserDetailsManager(aluno);
